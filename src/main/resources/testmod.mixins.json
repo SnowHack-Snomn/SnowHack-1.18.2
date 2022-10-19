@@ -9,7 +9,9 @@
     "ExampleMixin",
     "ClientConnectionMixin",
     "MinecraftClientMixin",
-    "KeyboardMixin"
+    "KeyboardMixin",
+    "FishingBobberEntityMixin",
+    "InGameHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -5,6 +5,7 @@ import net.minecraft.client.MinecraftClient;
 public class Hack {
 
     private String name;
+    private String displayName;
     private String description;
     private Category category;
     private int key;
@@ -14,6 +15,7 @@ public class Hack {
 
     public Hack(String name, String description, Category category) {
         this.name = name;
+        this.displayName = name;
         this.description = description;
         this.category = category;
     }
@@ -35,6 +37,14 @@ public class Hack {
 
     public void onTick() {
 
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getName() {

@@ -4,6 +4,7 @@ import net.snomn.testmod.hack.Hack;
 import org.lwjgl.glfw.GLFW;
 
 public class AutoFishing extends Hack {
+
     public AutoFishing() {
         super("AutoFishing", "Autofishes for you", Category.MISC);
         this.setKey(GLFW.GLFW_KEY_H);
