@@ -1,7 +1,11 @@
 package net.snomn.testmod.mixin;
 
 import net.snomn.testmod.TestMod;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.data.TrackedData;
 import net.minecraft.entity.projectile.FishingBobberEntity;
+import net.minecraft.util.Hand;
+import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,13 +15,15 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(FishingBobberEntity.class)
 public class FishingBobberEntityMixin {
 
-    @Shadow private int waitCountdown;
     @Shadow private boolean caughtFish;
 
+    @Inject(method = "onTrackedDataSet", at = @At("TAIL"))
+    public void onTrackedDataSet(TrackedData<?> data, CallbackInfo ci) {
 
-    @Inject(at = @At("TAIL"), method = "tick()V")
-    public void tick(CallbackInfo info) {
+        MinecraftClient client = MinecraftClient.getInstance();
 
-        TestMod.LOGGER.info("tick: "+caughtFish+" | "+waitCountdown);
+        if(caughtFish) {
+            client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
+        }
     }
 }
