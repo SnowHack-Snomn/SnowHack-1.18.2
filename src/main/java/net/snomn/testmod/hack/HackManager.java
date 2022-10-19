@@ -1,5 +1,6 @@
 package net.snomn.testmod.hack;
 
+import net.snomn.testmod.hack.misc.AutoFishing;
 import net.snomn.testmod.hack.movement.Flight;
 
 import java.util.ArrayList;
@@ -29,6 +30,7 @@ public class HackManager {
 
     private void addHacks() {
         hacks.add(new Flight());
+        hacks.add(new AutoFishing());
     }
 
 }
