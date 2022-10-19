@@ -12,6 +12,6 @@ public class MinecraftClientMixin {
 
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     public void onTick(CallbackInfo ci){
-        TestMod.INSTANCE.LOGGER.info("Ticking");
+        TestMod.INSTANCE.onTick();
     }
 }
