@@ -1,8 +1,8 @@
-package net.snomn.testmod.hack;
+package net.snomn.snowhack.hack;
 
-import net.snomn.testmod.hack.misc.AutoFish;
-import net.snomn.testmod.hack.misc.BoatFly;
-import net.snomn.testmod.hack.movement.*;
+import net.snomn.snowhack.hack.misc.AutoFish;
+import net.snomn.snowhack.hack.misc.BoatFly;
+import net.snomn.snowhack.hack.movement.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,17 +1,19 @@
-package net.snomn.testmod;
+package net.snomn.snowhack;
 
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.MinecraftClient;
-import net.snomn.testmod.hack.Hack;
-import net.snomn.testmod.hack.HackManager;
+import net.snomn.snowhack.hack.Hack;
+import net.snomn.snowhack.hack.HackManager;
+import net.snomn.snowhack.ui.screens.clickgui.ClickGUI;
 import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class TestMod implements ModInitializer {
+public class SnowHack implements ModInitializer {
 
-	public static final TestMod INSTANCE = new TestMod();
-	public static final Logger LOGGER = LoggerFactory.getLogger("testmod");
+	public static final SnowHack INSTANCE = new SnowHack();
+	public static final Logger LOGGER = LoggerFactory.getLogger("snowhack");
+
 
 	private MinecraftClient mc = MinecraftClient.getInstance();
 
@@ -25,6 +27,8 @@ public class TestMod implements ModInitializer {
 			for(Hack hack : HackManager.INSTANCE.getHacks()) {
 				if (key == hack.getKey()) hack.toggle();
 			}
+
+			if(key == GLFW.GLFW_KEY_RIGHT_SHIFT) mc.setScreen(ClickGUI.INSTANCE);
 		}
 	}
 

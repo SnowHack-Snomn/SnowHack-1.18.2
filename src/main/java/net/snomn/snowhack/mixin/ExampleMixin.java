@@ -1,7 +1,7 @@
-package net.snomn.testmod.mixin;
+package net.snomn.snowhack.mixin;
 
 import net.minecraft.client.gui.screen.TitleScreen;
-import net.snomn.testmod.TestMod;
+import net.snomn.snowhack.SnowHack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -11,6 +11,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class ExampleMixin {
 	@Inject(at = @At("HEAD"), method = "init()V")
 	private void init(CallbackInfo info) {
-		TestMod.LOGGER.info("This line is printed by an example mod mixin!");
+		SnowHack.LOGGER.info("This line is printed by an example mod mixin!");
 	}
 }

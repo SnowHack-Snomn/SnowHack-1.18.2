@@ -1,6 +1,6 @@
-package net.snomn.testmod.hack.movement;
+package net.snomn.snowhack.hack.movement;
 
-import net.snomn.testmod.hack.Hack;
+import net.snomn.snowhack.hack.Hack;
 import org.lwjgl.glfw.GLFW;
 
 public class Flight extends Hack {

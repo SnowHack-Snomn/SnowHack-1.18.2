@@ -1,9 +1,9 @@
-package net.snomn.testmod.ui;
+package net.snomn.snowhack.ui;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.util.math.MatrixStack;
-import net.snomn.testmod.hack.Hack;
-import net.snomn.testmod.hack.HackManager;
+import net.snomn.snowhack.hack.Hack;
+import net.snomn.snowhack.hack.HackManager;
 
 import java.util.Comparator;
 import java.util.List;

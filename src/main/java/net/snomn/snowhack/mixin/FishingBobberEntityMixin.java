@@ -1,4 +1,4 @@
-package net.snomn.testmod.mixin;
+package net.snomn.snowhack.mixin;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.data.TrackedData;
@@ -22,8 +22,8 @@ public class FishingBobberEntityMixin {
         MinecraftClient client = MinecraftClient.getInstance();
 
         if (caughtFish) {
-            client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
-            client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
+            client.interactionManager.interactItem(client.player, Hand.MAIN_HAND);
+            client.interactionManager.interactItem(client.player, Hand.MAIN_HAND);
         }
     }
 }

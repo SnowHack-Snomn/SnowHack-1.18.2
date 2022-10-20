@@ -1,4 +1,4 @@
-package net.snomn.testmod.hack.settings;
+package net.snomn.snowhack.hack.settings;
 
 import java.util.Arrays;
 import java.util.List;

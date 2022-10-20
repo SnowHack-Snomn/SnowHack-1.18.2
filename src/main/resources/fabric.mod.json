@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "testmod",
+  "id": "snowhack",
   "version": "${version}",
 
-  "name": "Test Mod",
+  "name": "Snow Hack",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.snomn.testmod.TestMod"
+      "net.snomn.snowhack.SnowHack"
     ]
   },
   "mixins": [
@@ -29,7 +29,7 @@
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.18.2",
+    "minecraft": "~1.19.2",
     "java": ">=17"
   },
   "suggests": {

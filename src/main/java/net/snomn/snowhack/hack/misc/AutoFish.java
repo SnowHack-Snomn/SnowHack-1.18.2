@@ -1,6 +1,6 @@
-package net.snomn.testmod.hack.misc;
+package net.snomn.snowhack.hack.misc;
 
-import net.snomn.testmod.hack.Hack;
+import net.snomn.snowhack.hack.Hack;
 import org.lwjgl.glfw.GLFW;
 
 public class AutoFish extends Hack {

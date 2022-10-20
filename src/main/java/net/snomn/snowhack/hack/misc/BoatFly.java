@@ -1,10 +1,9 @@
-package net.snomn.testmod.hack.misc;
+package net.snomn.snowhack.hack.misc;
 
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.Vec3d;
-import net.snomn.testmod.TestMod;
-import net.snomn.testmod.hack.Hack;
+import net.snomn.snowhack.hack.Hack;
 import org.lwjgl.glfw.GLFW;
 
 public class BoatFly extends Hack {

@@ -1,7 +1,7 @@
-package net.snomn.testmod.mixin;
+package net.snomn.snowhack.mixin;
 
 import net.minecraft.client.MinecraftClient;
-import net.snomn.testmod.TestMod;
+import net.snomn.snowhack.SnowHack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -12,6 +12,6 @@ public class MinecraftClientMixin {
 
     @Inject(method = "tick", at = @At("HEAD"), cancellable = true)
     public void onTick(CallbackInfo ci){
-        TestMod.INSTANCE.onTick();
+        SnowHack.INSTANCE.onTick();
     }
 }

@@ -1,4 +1,4 @@
-package net.snomn.testmod.hack;
+package net.snomn.snowhack.hack;
 
 import net.minecraft.client.MinecraftClient;
 
