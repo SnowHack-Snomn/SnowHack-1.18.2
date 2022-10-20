@@ -26,5 +26,4 @@ public class FishingBobberEntityMixin {
             client.interactionManager.interactItem(client.player, client.world, Hand.MAIN_HAND);
         }
     }
-
 }

@@ -12,13 +12,17 @@ public class Flight extends Hack {
 
     @Override
     public void onTick() {
-        mc.player.getAbilities().flying = true;
+        if(mc.player !=null) {
+            mc.player.getAbilities().flying = true;
+        }
         super.onTick();
     }
 
     @Override
     public void onDisable() {
-        mc.player.getAbilities().flying = false;
+        if(mc.player !=null) {
+            mc.player.getAbilities().flying = false;
+        }
         super.onDisable();
     }
 }

@@ -13,6 +13,8 @@ public class TestMod implements ModInitializer {
 	public static final TestMod INSTANCE = new TestMod();
 	public static final Logger LOGGER = LoggerFactory.getLogger("testmod");
 
+	public static boolean xrayEnabled;
+
 	private MinecraftClient mc = MinecraftClient.getInstance();
 
 	@Override
