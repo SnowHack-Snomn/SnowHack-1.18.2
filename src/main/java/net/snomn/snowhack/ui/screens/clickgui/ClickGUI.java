@@ -21,7 +21,7 @@ public class ClickGUI extends Screen {
 
         int offset = 20;
         for (Category category : Category.values()) {
-            frames.add(new Frame(category, offset, 30, 100, 30));
+            frames.add(new Frame(category, offset, 20, 100, 20));
             offset += 120;
         }
     }
@@ -30,6 +30,7 @@ public class ClickGUI extends Screen {
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
         for (Frame frame : frames) {
             frame.render(matrices, mouseX, mouseY, delta);
+            frame.updatePosition(mouseX, mouseY);
         }
         super.render(matrices, mouseX, mouseY, delta);
     }
@@ -42,5 +43,16 @@ public class ClickGUI extends Screen {
         return super.mouseClicked(mouseX, mouseY, button);
     }
 
+    @Override
+    public boolean mouseReleased(double mouseX, double mouseY, int button) {
+        for (Frame frame : frames) {
+            frame.mouseReleassed(mouseX, mouseY, button);
+        }
+        return super.mouseReleased(mouseX, mouseY, button);
+    }
 
+    @Override
+    public boolean shouldPause() {
+        return false;
+    }
 }

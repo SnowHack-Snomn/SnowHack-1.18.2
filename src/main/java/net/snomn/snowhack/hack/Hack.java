@@ -1,6 +1,10 @@
 package net.snomn.snowhack.hack;
 
 import net.minecraft.client.MinecraftClient;
+import net.snomn.snowhack.hack.settings.Setting;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hack {
 
@@ -11,6 +15,8 @@ public class Hack {
     private int key;
     private boolean enabled;
 
+    private List<Setting> settings = new ArrayList<>();
+
     protected MinecraftClient mc = MinecraftClient.getInstance();
 
     public Hack(String name, String description, Category category) {
@@ -18,6 +24,18 @@ public class Hack {
         this.displayName = name;
         this.description = description;
         this.category = category;
+    }
+
+    public List<Setting> getSettings() {
+        return settings;
+    }
+
+    public void addSetting(Setting setting) {
+        settings.add(setting);
+    }
+
+    public void addSettings(Setting... settings) {
+        for (Setting setting : settings) addSetting(setting);
     }
 
     public void toggle() {
@@ -87,9 +105,16 @@ public class Hack {
     }
 
     public enum Category {
-        COMBAT,
-        MOVEMENT,
-        RENDER,
-        MISC
+        COMBAT("Combat"),
+        MOVEMENT("Movement"),
+        RENDER("Render"),
+        MISC("Misc"),
+        EXPLOIT("Exploit");
+
+        public String name;
+
+        Category(String name) {
+            this.name = name;
+        }
     }
 }
