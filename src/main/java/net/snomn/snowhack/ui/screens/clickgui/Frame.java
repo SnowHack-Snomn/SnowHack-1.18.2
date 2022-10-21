@@ -75,7 +75,11 @@ public class Frame {
 
     public void mouseReleassed(double mouseX, double mouseY, int button) {
         if (button == 0 && dragging == true) dragging = false;
-    }
+
+        for (HackButton hb : buttons) {
+            hb.mouseReleased(mouseX, mouseY, button);
+        }
+     }
 
     public boolean isHovered(double mouseX, double mouseY) {
         return mouseX > x && mouseX < x + width && mouseY > y && mouseY < y + height;
