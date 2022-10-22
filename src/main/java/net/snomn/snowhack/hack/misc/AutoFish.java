@@ -39,6 +39,7 @@ public class AutoFish extends Hack {
         }
 
         if( recastRod == 0 && AutoFishEnabled) {
+            // in 1.19.2 mc.interactionManager.interactItem(mc.player, mc.world, Hand.MAIN_HAND); without "mc.world" so mc.interactionManager.interactItem(mc.player, Hand.MAIN_HAND);
             mc.interactionManager.interactItem(mc.player, mc.world, Hand.MAIN_HAND);
             recastRod = -1;
         }

@@ -15,6 +15,7 @@ public class ClickGUI extends Screen {
     private List<Frame> frames;
 
     private ClickGUI() {
+        // Instead of ".of" do .literal in 1.19.2
         super(Text.of("Click GUI"));
 
         frames = new ArrayList<>();

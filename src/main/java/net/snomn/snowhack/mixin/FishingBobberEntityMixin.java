@@ -23,6 +23,7 @@ public class FishingBobberEntityMixin {
         MinecraftClient mc = MinecraftClient.getInstance();
 
         if (caughtFish && AutoFish.AutoFishEnabled) {
+            // in 1.19.2 mc.interactionManager.interactItem(mc.player, mc.world, Hand.MAIN_HAND); without "mc.world" so mc.interactionManager.interactItem(mc.player, Hand.MAIN_HAND);
             AutoFish.RecastRodDelay();
             mc.interactionManager.interactItem(mc.player, mc.world, Hand.MAIN_HAND);
         }
