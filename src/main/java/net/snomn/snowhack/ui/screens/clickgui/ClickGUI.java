@@ -15,7 +15,7 @@ public class ClickGUI extends Screen {
     private List<Frame> frames;
 
     private ClickGUI() {
-        super(Text.literal("Click GUI"));
+        super(Text.of("Click GUI"));
 
         frames = new ArrayList<>();
 
